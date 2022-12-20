@@ -1,3 +1,6 @@
+/* ------------------------------------------- */
+/* ---------------Global styles--------------- */
+
 body {
   margin: 0;
   font-family: "Railway", sans-serif;
@@ -41,6 +44,9 @@ button:hover {
   box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
 }
 
+/* ------------------------------------------- */
+/* ---------------Header styles--------------- */
+
 .header {
   display: flex;
   align-items: center;
@@ -55,6 +61,9 @@ button:hover {
 .header__logo {
   height: 30px;
 }
+
+/* ------------------------------------------- */
+/* --------------About styles----------------- */
 
 .about {
   display: flex;
@@ -107,6 +116,175 @@ button:hover {
     transform: rotate(360deg);
   }
 }
+
+/* ------------------------------------------- */
+/* --------Features + cards styles------------ */
+
+.features {
+  padding: 115px 60px;
+  background-color: #fff;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+}
+
+.card {
+  padding: 35px 40px 25px 40px;
+  background: #fff;
+  border: 1px solid #d9e4e6;
+  border-radius: 5px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 22px;
+  opacity: 0.8;
+}
+
+.card__logo {
+  font-weight: 700;
+  font-size: 32px;
+  background: #eaeff9;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:nth-child(1) .card__logo {
+  color: #ffb406;
+}
+.card:nth-child(2) .card__logo {
+  color: #ad1714;
+}
+.card:nth-child(3) .card__logo {
+  color: #22a030;
+}
+
+.features__border {
+  width: 100%;
+  border: 1px solid #e6eaf4;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.features__feedback {
+  display: flex;
+}
+
+.features__feedback-left {
+  margin-right: 10px;
+}
+
+.features__feedback-left h2 {
+  font-size: 48px;
+}
+
+.features__feedback-left p {
+  font-size: 18px;
+  line-height: 26px;
+  opacity: 0.7;
+}
+
+.features__feedback-right {
+  display: flex;
+}
+
+.features__box {
+  padding: 30px 40px 25px 40px;
+  color: #fff;
+  border-radius: 25px;
+}
+
+.features__box h3 {
+  margin: 0 0 20px 0;
+  font-size: 48px;
+}
+
+.features__savings-box {
+  background-color: #dc5e26;
+  box-shadow: rgb(221 95 38 / 20%) 0px 6px 0;
+  margin-right: 30px;
+}
+
+.features__rate-box {
+  background-color: #1d263a;
+  box-shadow: rgb(29 38 58 / 20%) 0px 6px 0;
+}
+
+.stars {
+  color: #ff7039;
+}
+
+/* ------------------------------------------- */
+/* ---------------Promo styles---------------- */
+
+.promo {
+  display: flex;
+}
+
+.promo__right {
+  background-color: #dd5f26;
+  padding: 160px 60px;
+}
+
+.promo__image {
+  background-image: url(img/promo.jpg);
+  width: 50%;
+  flex-shrink: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.promo__text {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+}
+
+.promo__text p::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ec6b29;
+  margin-right: 10px;
+}
+
+.promo__text p {
+  opacity: 0.8;
+}
+
+.promo__text button {
+  background-color: #107b1c;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  box-shadow: 0 16px 36px rgb(16 122 28 / 30%);
+  padding: 15px 30px;
+}
+
+.promo__button-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.promo__text button i {
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+/* ------------------------------------------- */
+/* --------------Form styles------------------ */
 
 .form {
   background-color: #1d263a;
@@ -165,6 +343,9 @@ button:hover {
   margin-top: 40px;
 }
 
+/* ------------------------------------------- */
+/* --------------Footer styles---------------- */
+
 .footer {
   padding: 90px 20px;
   font-size: 16px;
@@ -201,6 +382,9 @@ button:hover {
   opacity: 0.5;
 }
 
+/* ------------------------------------------- */
+/* --------Adaptive styles/Media styles------- */
+
 @media (max-width: 1024px) {
   .about,
   .form {
@@ -211,6 +395,14 @@ button:hover {
   .form h1 {
     font-size: 36px;
     line-height: 40px;
+  }
+
+  .cards {
+    grid-gap: 30px;
+  }
+
+  .card {
+    padding: 35px 20px 25px;
   }
 
   .about__image {
@@ -240,6 +432,50 @@ button:hover {
 
   .header__logo {
     height: 20px;
+  }
+
+  .features {
+    padding: 50px 10px;
+  }
+
+  .cards {
+    grid-template-columns: auto;
+  }
+
+  .features__feedback {
+    flex-direction: column;
+  }
+
+  .features__feedback-left {
+    margin-right: 0;
+  }
+
+  .features__feedback-left h2,
+  .features__box h3 {
+    font-size: 36px;
+  }
+
+  .features__feedback-right {
+    flex-direction: column;
+    align-items: initial;
+  }
+
+  .features__savings-box {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .promo {
+    flex-direction: column-reverse;
+  }
+
+  .promo__right {
+    padding: 50px 10px;
+  }
+
+  .promo__image {
+    width: 100%;
+    height: 500px;
   }
 
   .footer__container {
